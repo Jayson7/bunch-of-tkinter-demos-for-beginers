@@ -2,27 +2,33 @@ from tkinter import *
 root = Tk()
 
 root.title("Simple calculator - Jayson")
-entry = Entry(root, width=35, borderwidth=7 )
-entry.grid(row=0, column=0, columnspan=3, padx=30, pady=40)
+entry = Entry(root, width=20, borderwidth=7 )
+entry.grid(row=0, column=0, columnspan=3, padx=20, pady=40)
 
-def button_add():
-    pass
+
+def button_click(number):
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, str(current) + str(number))
+
+def button_clear():
+    entry.delete(0, END)
 
 # all buttons needed
 
-button_1 = Button(root, text="1", padx=30, pady=10, command=button_add )
-button_2 = Button(root, text="2", padx=30, pady=10, command=button_add )
-button_3 = Button(root, text="3", padx=30, pady=10, command=button_add )
-button_4 = Button(root, text="4", padx=30, pady=10, command=button_add )
-button_5 = Button(root, text="5", padx=30, pady=10, command=button_add )
-button_6 = Button(root, text="6", padx=30, pady=10, command=button_add )
-button_7 = Button(root, text="7", padx=30, pady=10, command=button_add )
-button_8 = Button(root, text="8", padx=30, pady=10, command=button_add )
-button_9 = Button(root, text="9", padx=30, pady=10, command=button_add )
-button_0 = Button(root, text="0", padx=30, pady=10, command=button_add )
-button_add = Button(root, text="+", padx=30, pady=20, command=button_add )
-button_equal = Button(root, text="=", padx=80, pady=20, command=button_add )
-button_clear = Button(root, text="Clear", padx=70, pady=10, command=button_add )
+button_1 = Button(root, text="1", padx=25, pady=10, command=lambda: button_click(1) )
+button_2 = Button(root, text="2", padx=25, pady=10, command=lambda: button_click(2) )
+button_3 = Button(root, text="3", padx=25, pady=10, command=lambda: button_click(3) )
+button_4 = Button(root, text="4", padx=25, pady=10, command=lambda: button_click(4) )
+button_5 = Button(root, text="5", padx=25, pady=10, command=lambda: button_click(5) )
+button_6 = Button(root, text="6", padx=25, pady=10, command=lambda: button_click(6) )
+button_7 = Button(root, text="7", padx=25, pady=10, command=lambda: button_click(7) )
+button_8 = Button(root, text="8", padx=25, pady=10, command=lambda: button_click(8) )
+button_9 = Button(root, text="9", padx=25, pady=10, command=lambda: button_click(9) )
+button_0 = Button(root, text="0", padx=25, pady=10, command=lambda: button_click(0) )
+button_add = Button(root, text="+", padx=25, pady=20, command=lambda: button_click() )
+button_equal = Button(root, text="=", padx=60, pady=20, command=lambda: button_click() )
+button_clear = Button(root, text="Clear", padx=50, pady=10, command=button_clear )
 
 # activating button to the screen
 button_1.grid(row=3, column=0)
