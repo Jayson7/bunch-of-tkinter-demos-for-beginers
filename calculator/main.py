@@ -67,9 +67,9 @@ button_0 = Button(root, text="0", padx=25, pady=10, command=lambda: button_click
 button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
 button_equal = Button(root, text="=", padx=60, pady=20, command=button_equal )
 button_clear = Button(root, text="Clear", padx=50, pady=10, command=button_clear )
-button_subtract = Button(root, text="+", padx=25, pady=20, command=button_subtract )
-button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
-button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
+button_subtract = Button(root, text="-", padx=25, pady=20, command=button_subtract )
+button_add = Button(root, text="x", padx=25, pady=20, command=button_multiply )
+button_add = Button(root, text="/", padx=25, pady=20, command=button_divide )
 
 # activating button to the screen
 button_1.grid(row=3, column=0)
