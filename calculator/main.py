@@ -2,7 +2,7 @@ from tkinter import *
 root = Tk()
 
 root.title("Simple calculator - Jayson")
-entry = Entry(root, width=20, borderwidth=7 )
+entry = Entry(root, width=30, borderwidth=7 )
 entry.grid(row=0, column=0, columnspan=3, padx=20, pady=40)
 
 
@@ -20,14 +20,37 @@ def button_add():
     global f_num
     f_num = int(first_number)
     entry.delete(0, END)
-    
+
+
+def button_divide():
+    # first_number = entry.get()
+    # global f_num
+    # f_num = int(first_number)
+    # entry.delete(0, END)
+    pass
+
+def button_multiply():
+    # first_number = entry.get()
+    # global f_num
+    # f_num = int(first_number)
+    # entry.delete(0, END)
+    pass
+
+def button_subtract():
+    # first_number = entry.get()
+    # global f_num
+    # f_num = int(first_number)
+    # entry.delete(0, END)
+    pass
+
+
 
 def button_equal():
     second_number = entry.get()
     entry.delete(0, END)
     entry.insert(0, f_num + int(second_number))
    
-
+# Author - Jayson
 
 # all buttons needed
 
@@ -44,6 +67,9 @@ button_0 = Button(root, text="0", padx=25, pady=10, command=lambda: button_click
 button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
 button_equal = Button(root, text="=", padx=60, pady=20, command=button_equal )
 button_clear = Button(root, text="Clear", padx=50, pady=10, command=button_clear )
+button_subtract = Button(root, text="+", padx=25, pady=20, command=button_subtract )
+button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
+button_add = Button(root, text="+", padx=25, pady=20, command=button_add )
 
 # activating button to the screen
 button_1.grid(row=3, column=0)
@@ -57,7 +83,7 @@ button_6.grid(row=2, column=2)
 button_7.grid(row=1, column=1)
 button_8.grid(row=1, column=0)
 button_9.grid(row=1, column=2)
-
+# Author - Jayson
 button_0.grid(row=4, column=0)
 button_clear.grid(row=4, column=1, columnspan=2)
 button_add.grid(row=5, column=0, columnspan=1 )
