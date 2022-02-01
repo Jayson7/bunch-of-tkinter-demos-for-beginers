@@ -1,5 +1,6 @@
 from  tkinter import *
 from PIL import ImageTk, Image
+from click import command
 
 root = Tk()
 
@@ -23,10 +24,16 @@ my_img6 = ImageTk.PhotoImage(Image.open('./1.jpg').resize((750, 550), Image.ANTI
 image_list = [my_img, my_img2, my_img3, my_img4, my_img5, my_img6]
 
 
+def back():
+    pass
 
-button_back = Button(root,  text="<<" )
+def forward():
+    pass
+
+
+button_back = Button(root,  text="<<", command=lambda: back()   )
 button_quit = Button(root, text="Exit program", command=root.quit)
-button_forward = Button(root,  text=">>" )
+button_forward = Button(root,  text=">>", command=lambda: forward() )
 
 
 button_forward.grid(row=1, column=0)
