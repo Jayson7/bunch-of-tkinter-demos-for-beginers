@@ -44,7 +44,7 @@ def back(image_number):
     
     
     # print(image_number)
-    if image_number == 0:
+    if image_number == 1:
         button_back = Button(root, text=">>", state=DISABLED )
     
     button_forward.grid(row=1, column=1)
@@ -75,7 +75,7 @@ def forward(image_number):
 
 button_back = Button(root,  text="<<", command= lambda: back(6), state=DISABLED ) 
 button_quit = Button(root, text="Exit program", command=root.quit)
-button_forward = Button(root,  text=">>", command=lambda: forward(0 ))
+button_forward = Button(root,  text=">>", command=lambda: forward(1 ))
 
 
 button_forward.grid(row=1, column=1)
