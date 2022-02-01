@@ -50,7 +50,6 @@ def button_subtract():
     f_num = int(first_number)
     entry.delete(0, END)
     
-
 def button_equal():
     second_number = entry.get()
     entry.delete(0, END)
