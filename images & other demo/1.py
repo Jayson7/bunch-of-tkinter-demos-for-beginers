@@ -9,6 +9,7 @@ root.geometry("750x600")
 # root.iconbitmap("/home/favicon.ico")
 
 my_img = ImageTk.PhotoImage(Image.open('./4.jpg'))
+my_img = Image.resize((450, 350), Image.ANTIALIAS)
 my_label = Label(image=my_img  )
 my_label.grid(row=0, column=0, columnspan=3)
 # print(dir(my_label))
