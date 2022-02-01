@@ -5,27 +5,27 @@ from click import command
 root = Tk()
 
 root.title("Jayson - Gallery")
-root.geometry("350x290")
+root.geometry("370x383")
 # favicon
 # root.iconbitmap("/home/favicon.ico")
 
-my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((370, 350), Image.ANTIALIAS) )
 
-my_img2 = ImageTk.PhotoImage(Image.open('./11.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img2 = ImageTk.PhotoImage(Image.open('./11.jpg').resize((370, 350), Image.ANTIALIAS) )
 
-my_img3 = ImageTk.PhotoImage(Image.open('./5.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img3 = ImageTk.PhotoImage(Image.open('./5.jpg').resize((370, 350), Image.ANTIALIAS) )
 
-my_img4 = ImageTk.PhotoImage(Image.open('./3.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img4 = ImageTk.PhotoImage(Image.open('./3.jpg').resize((370, 350), Image.ANTIALIAS) )
 
-my_img5 = ImageTk.PhotoImage(Image.open('./2.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img5 = ImageTk.PhotoImage(Image.open('./2.jpg').resize((370, 350), Image.ANTIALIAS) )
 
-my_img6 = ImageTk.PhotoImage(Image.open('./1.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img6 = ImageTk.PhotoImage(Image.open('./1.jpg').resize((370, 350), Image.ANTIALIAS) )
 
 image_list = [my_img, my_img2, my_img3, my_img4, my_img5, my_img6]
 
 
 
-my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((350, 250), Image.ANTIALIAS) )
+my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((370, 350), Image.ANTIALIAS) )
 
 my_label = Label(image=my_img)
 my_label.grid(row=0, column=0, columnspan=3)
@@ -75,7 +75,7 @@ def forward(image_number):
 
 button_back = Button(root,  text="<<", command= lambda: back(6), state=DISABLED ) 
 button_quit = Button(root, text="Exit program", command=root.quit)
-button_forward = Button(root,  text=">>", command=lambda: forward(0 ))
+button_forward = Button(root,  text=">>", command=lambda: forward(2))
 
 
 button_forward.grid(row=1, column=1)
