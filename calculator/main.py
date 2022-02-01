@@ -35,7 +35,7 @@ def button_divide():
 def button_multiply():
     first_number = entry.get()
     global maths
-    maths = 'multiplication'
+    maths = 'multiplication' 
     global f_num
     f_num = int(first_number)
     entry.delete(0, END)
