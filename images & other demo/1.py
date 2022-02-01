@@ -6,10 +6,11 @@ root = Tk()
 root.title("Jayson - software developer")
 
 # favicon
-# root.iconbitmap("./favicon")
+# root.iconbitmap("/home/favicon.ico")
 
 my_img = ImageTk.PhotoImage(Image.open('./4.jpg'))
-
+my_label = Label(image=my_img)
+my_label.pack()
 
 
 
