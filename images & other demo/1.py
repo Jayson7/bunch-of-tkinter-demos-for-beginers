@@ -6,7 +6,7 @@ root = Tk()
 root.title("Jayson - software developer")
 
 # favicon
-root.iconbitmap("4.jpg")
+root.iconbitmap("./favicon")
 
 my_img = ImageTk.PhotoImage(Image.open('4.jpg'))
 
