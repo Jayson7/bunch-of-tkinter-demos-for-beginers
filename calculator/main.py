@@ -32,7 +32,6 @@ def button_divide():
     f_num = int(first_number)
     entry.delete(0, END)
     
-
 def button_multiply():
     first_number = entry.get()
     global maths
