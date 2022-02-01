@@ -9,7 +9,8 @@ root.title("Jayson - software developer")
 # root.iconbitmap("/home/favicon.ico")
 
 my_img = ImageTk.PhotoImage(Image.open('./4.jpg'))
-my_label = Label(image=my_img)
+my_label = Label(image=my_img, width=300, height=300)
+# print(dir(my_label))
 my_label.pack()
 
 
