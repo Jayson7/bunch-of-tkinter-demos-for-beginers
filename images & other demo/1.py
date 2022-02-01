@@ -30,17 +30,13 @@ my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((350, 250), Image.ANTIA
 my_label = Label(image=my_img)
 my_label.grid(row=0, column=0, columnspan=3)
 
-
-def back(image_number):
-    global my_label
-    global button_forward 
-    global button_back
   
     
 def forward(image_number):
     global my_label
     global button_forward 
     global button_back
+   
     my_label.grid_forget()
     my_label = Label(image = image_list[image_number -1] )
     button_forward = Button(root, text=">>", command=lambda:forward(image_number+1))
@@ -65,9 +61,18 @@ button_forward.grid(row=1, column=1)
 button_back.grid(row=1, column=0)
 button_quit.grid(row=1, column=2)
 
+
+def back(image_number):
+    global my_label
+    global button_forward 
+    global button_back
+    my_label.grid_forget()
+
+    button_back = Button(root,  text="<<", command= back  ) 
+    button_quit = Button(root, text="Exit program", command=root.quit)
+    button_forward = Button(root,  text=">>", command=lambda: forward(1 ))
+
 # exit button
-
-
 
 
 
