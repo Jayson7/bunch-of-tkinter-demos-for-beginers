@@ -5,7 +5,7 @@ from click import command
 root = Tk()
 
 root.title("Jayson - Gallery")
-root.geometry("370x383")
+root.geometry("370x430")
 # favicon
 # root.iconbitmap("/home/favicon.ico")
 
@@ -23,7 +23,7 @@ my_img6 = ImageTk.PhotoImage(Image.open('./1.jpg').resize((370, 350), Image.ANTI
 
 image_list = [my_img, my_img2, my_img3, my_img4, my_img5, my_img6]
 
-
+status = Label(root, text="Image 1 of " + str(len(image_list)), bd=1, relief= SUNKEN, pady=10, padx=10, anchor=W )
 
 my_img = ImageTk.PhotoImage(Image.open('./4.jpg').resize((370, 350), Image.ANTIALIAS) )
 
@@ -73,7 +73,7 @@ def forward(image_number):
     button_back.grid(row=1, column=0)
     my_label.grid(row=0, column=0, columnspan=3)
 
-button_back = Button(root,  text="<<", command= lambda: back(6), state=DISABLED ) 
+button_back = Button(root,  text="<<", command= lambda: back(5), state=DISABLED ) 
 button_quit = Button(root, text="Exit program", command=root.quit)
 button_forward = Button(root,  text=">>", command=lambda: forward(2))
 
@@ -81,7 +81,7 @@ button_forward = Button(root,  text=">>", command=lambda: forward(2))
 button_forward.grid(row=1, column=1)
 button_back.grid(row=1, column=0)
 button_quit.grid(row=1, column=2)
-
+status.grid(row=2, column=0, columnspan=3, sticky=W+E )
 
 # exit button
 
